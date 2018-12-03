@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+  - image: annp1987/hello_world
+    name: hello-world
+    ports:
+    - containerPort: 8000
+      protocol: TCP
