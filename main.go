@@ -60,7 +60,7 @@ func main() {
         router := mux.NewRouter()
         list_staffs = append(list_staffs, Staff{Id: "1", Name: "abc"})
         list_staffs = append(list_staffs, Staff{Id: "2",Name: "xyz"})
-        router.HandleFunc("/v1//api",get_staffs).Methods("GET")
+        router.HandleFunc("/v1/api",get_staffs).Methods("GET")
         router.HandleFunc("/v1/api/{id}", get_staff).Methods("GET")
         router.HandleFunc("/v1/api", create_staff).Methods("POST")
         router.HandleFunc("/v1/api/{id}", delete_staff).Methods("DELETE")
